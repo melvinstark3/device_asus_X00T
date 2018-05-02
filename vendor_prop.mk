@@ -121,6 +121,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable QC2 bufferqueue block-pool
 PRODUCT_PROPERTY_OVERRIDES += vendor.qc2.use.bqpool=1
 
+# Rotator down scaler
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.disable_rotator_downscale=1
+
 # Early phase offset configuration for SurfaceFlinger
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_phase_offset_ns=1500000 \
