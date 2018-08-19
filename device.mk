@@ -481,6 +481,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk-sp
 
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v28/arm64/arch-arm-armv8-a/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v28.so
+
 # WFD
 PRODUCT_PACKAGES += \
     libnl
