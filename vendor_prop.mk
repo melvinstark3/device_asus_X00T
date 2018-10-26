@@ -208,6 +208,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.iwlan.enable=true \
     persist.radio.multisim.config=dsds \
     persist.radio.VT_CAM_INTERFACE=1 \
+    persist.vendor.radio.sap_silent_pin=1 \
     persist.vendor.radio.multisim_switch_support=true \
     persist.radio.VT_CAM_INTERFACE=2 \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
