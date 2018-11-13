@@ -1,3 +1,7 @@
 persist.cdfinger.ready             u:object_r:cdfinger_prop:s0
 property.cdfinger.enablesave       u:object_r:cdfinger_prop:s0
 persist.vendor.runin.fp            u:object_r:cdfinger_prop:s0
+persist.vendor.camera.             u:object_r:vendor_camera_prop:s0
+
+# MPCTL
+sys.post_boot.parsed                u:object_r:vendor_mpctl_prop:s0
