@@ -1131,10 +1131,11 @@ service poweroffhandler /vendor/bin/poweroffhandler
 on property:vendor.display.lcd_density=*
     setprop ro.sf.lcd_density ${vendor.display.lcd_density}
 
-service time_daemon /vendor/bin/time_daemon
+service vendor.time_daemon /vendor/bin/time_daemon
     class main
-    user root
-    group root
+    user system
+    group system
+    writepid /dev/cpuset/system-background/tasks
 
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
