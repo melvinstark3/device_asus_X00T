@@ -27,4 +27,8 @@
 
     <!-- Show enabled lte option for lte device -->
     <bool name="config_enabled_lte" translatable="false">true</bool>
+
+    <!-- This device requires that emergency calls are placed over the default data SIM when
+         possible because GNSS SUPL can only be received from the network on data subscription. -->
+    <bool name="config_gnss_supl_requires_default_data_for_emergency">true</bool>
 </resources>
