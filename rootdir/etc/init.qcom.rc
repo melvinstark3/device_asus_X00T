@@ -1164,3 +1164,11 @@ service vendor.wifilearner /vendor/bin/wifilearner
     user wifi
     group wifi
     oneshot
+
+service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
+    override
+    class hal
+    user system
+    group system wakelock input
+    capabilities BLOCK_SUSPEND
+    rlimit rtprio 10 10
