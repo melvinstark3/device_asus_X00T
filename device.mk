@@ -253,11 +253,11 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0-java
 
 # IMS-packages
-PRODUCT_PACKAGES += \
-    ims-ext-common_system
+#PRODUCT_PACKAGES += \
+#    ims-ext-common_system
 
-PRODUCT_BOOT_JARS += \
-    ims-ext-common_system
+#PRODUCT_BOOT_JARS += \
+#    ims-ext-common_system
 
 
 # IMS
