@@ -251,6 +251,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.ecclist=112,911 \
     ro.telephony.default_network=20,20 \
     telephony.lteOnCdmaDevice=1
+    ro.telephony.iwlan_operation_mode=legacy \
+    rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
