@@ -328,3 +328,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # HW Overlay
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_hwc=1
+
+# Disable rescue party
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.disable_rescue=true
