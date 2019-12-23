@@ -133,6 +133,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
+    libldacBT_dec \
     liba2dpoffload \
     libbthost_if
 
