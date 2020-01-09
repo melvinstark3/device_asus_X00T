@@ -412,6 +412,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 
+# Pre-opt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
