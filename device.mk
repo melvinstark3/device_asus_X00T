@@ -487,6 +487,8 @@ PRODUCT_BOARD_PLATFORM := msm8996
 
 PRODUCT_USES_QCOM_HARDWARE := true
 
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
