@@ -1,8 +1,9 @@
 # Goodix Fingerprint
 /dev/goodix_fp                                                          u:object_r:fingerprintd_device:s0
 
-# Keylayout
-/(vendor|system/vendor)/usr/keylayout(/.*)?                             u:object_r:keylayout_file:s0
+# Firmware
+/firmware                                                                     u:object_r:firmware_file:s0
+/bt_firmware                                                                  u:object_r:bt_firmware_file:s0
 
 # Sensors
 /sys/devices/virtual/input/input[0-9]+/stk3x1x-proximity(/.*)?          u:object_r:sysfs_sensors:s0
@@ -18,3 +19,12 @@
 # blutmac script
 /(vendor|system/vendor)/bin/init\.btmac\.sh                             u:object_r:init_blutmac_exec:s0
 /(vendor|system/vendor)/bin/nvram_btwifi                                u:object_r:nvram_btwifi_exec:s0
+
+/firmware(/.*)?                                                 u:object_r:firmware_file:s0
+/bt_firmware(/.*)?                                              u:object_r:bt_firmware_file:s0
+
+# USB RNDIS
+/sys/module/usb_f_qcrndis/parameters(/.*)?         u:object_r:sysfs_usb_rndis:s0
+
+# Gestures
+/sys/kernel/touchpanel(/.*)?         u:object_r:sysfs_gesture:s0
