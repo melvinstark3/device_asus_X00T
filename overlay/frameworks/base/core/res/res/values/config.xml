@@ -496,9 +496,6 @@
 
     <bool name="doze_display_state_supported">true</bool>
 
-    <!-- Lawnstep -->
-    <string name="config_recentsComponentName" translatable="false">ch.deletescape.lawnchair.ci/com.android.quickstep.RecentsActivity</string>
-    
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>
 
