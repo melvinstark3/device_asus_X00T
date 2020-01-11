@@ -34,7 +34,8 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # Shims
 PRODUCT_PACKAGES += \
-    camera.sdm660_shim
+    camera.sdm660_shim \
+    libgpu_mapper_shim
 
 # Permissions
 PRODUCT_COPY_FILES += \

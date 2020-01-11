@@ -59,9 +59,9 @@ setup_vendor "$DEVICE" "$VENDOR" "$SYBERIA_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
-# Load vndk-28 libui for libmot_gpu_mapper
+# Load libmot_gpu_mapper shim
 MOT_GPU_MAPPER="$BLOB_ROOT"/vendor/lib/libmot_gpu_mapper.so
-patchelf --add-needed libui-v28.so "$MOT_GPU_MAPPER"
+patchelf --add-needed libgpu_mapper_shim.so "$MOT_GPU_MAPPER"
 
 patchelf --replace-needed "libicuuc.so" "libicuuq.so" "$DEVICE_BLOB_ROOT"/vendor/lib/libMiWatermark.so
 patchelf --replace-needed "libminikin.so" "libminiq.so" "$DEVICE_BLOB_ROOT"/vendor/lib/libMiWatermark.so
