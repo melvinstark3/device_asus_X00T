@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/syberia_X00T.mk
+    $(LOCAL_DIR)/potato_X00T.mk
 
 COMMON_LUNCH_CHOICES := \
-    syberia_X00TD-userdebug \
-    syberia_X00TD-user \
-    syberia_X00TD-eng
+    potato_X00T-userdebug \
+    potato_X00T-user \
+    potato_X00T-eng

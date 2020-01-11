@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Syberia Project stuff
-$(call inherit-product, vendor/syberia/common.mk)
+# Inherit some common POSP stuff
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 # Inherit from X00T device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -29,7 +29,7 @@ PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00T
 PRODUCT_MODEL := ZenFone Max Pro M1
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := syberia_X00T
+PRODUCT_NAME := potato_X00T
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
@@ -37,14 +37,12 @@ TARGET_VENDOR := asus
 TARGET_VENDOR_PRODUCT_NAME := X00T
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="crosshatch-user 9 PQ3A.190801.002 5670241 release-keys"
+    PRIVATE_BUILD_DESC="sdm660_64-user 9 PKQ1 1269 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := google/crosshatch/crosshatch:9/PQ3A.190801.002/5670241:user/release-keys
+BUILD_FINGERPRINT := google/walleye/walleye:9/PPP3.180510.008/4811556:user/release-keys
 
 TARGET_BOOT_ANIMATION_RES := 2160
-
-SYBERIA_BUILD_TYPE := OFFICIAL
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
