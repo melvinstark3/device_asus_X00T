@@ -68,6 +68,10 @@ patchelf --replace-needed "libminikin.so" "libminiq.so" "$DEVICE_BLOB_ROOT"/vend
 patchelf --set-soname "libicuuq.so" "$DEVICE_BLOB_ROOT"/vendor/lib/libicuuc.so
 patchelf --set-soname "libminiq.so" "$DEVICE_BLOB_ROOT"/vendor/lib/libminikin.so
 
+# Add uhid group for fingerprint service
+FP_SERVICE_RC="$BLOB_ROOT"/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
+sed -i "s/input/uhid input/" "$FP_SERVICE_RC"
+
 # Load camera.sdm660.so shim
 CAM_SDM660="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
 patchelf --add-needed camera.sdm660_shim.so "$CAM_SDM660"
